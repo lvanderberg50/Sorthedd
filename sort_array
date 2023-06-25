@@ -1,0 +1,16 @@
+def sort_array(source_array):
+    i, z = 0, 0
+    result = [0] * len(source_array)
+    oddNum = []
+    for data in source_array:
+        if data % 2 == 1:
+            oddNum.append(data)
+    oddNumSort = sorted(oddNum)
+    for data in source_array:
+        if data % 2 == 1:
+            result[i] = oddNumSort[z]
+            z += 1
+        else:
+            result[i] = data
+        i += 1
+    return result
